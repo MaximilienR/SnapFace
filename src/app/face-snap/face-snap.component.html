@@ -1,4 +1,9 @@
+<div class="face-snap-card">
 <h2>{{title}}</h2>
 <p>Mise en ligne le {{createDate}}</p>
-  
+<img [src]="image" [alt]="title">
 <p>{{description}} j'ai nomé {{person}}</p>
+<p>
+  <button (click)="onAddSnap()">Oh Snpa!</button>
+  :-){{snaps}}</p>
+</div>
