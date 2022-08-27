@@ -11,6 +11,7 @@ createDate!:Date;
 snaps:number=0;  
 person!:string;
 image!:string;
+btnSnap:string='Snapé';
 
 ngOnInit(){
   this.title='Mise en pratique de la semaine';
@@ -23,10 +24,13 @@ ngOnInit(){
 
 //incrementation de snap 
 
-onAddSnap(){
-  this.snaps++;
+onSnap(){
+if (this.btnSnap==='Snapé'){
+this.snaps ++;
+this.btnSnap='déjà Snapé'
+}else{
+  this.snaps --;
+  this.btnSnap='oh snap'
 }
-
 }
-
-
+}
