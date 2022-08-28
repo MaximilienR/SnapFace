@@ -8,29 +8,30 @@ export class FaceSnapComponent implements OnInit {
  title!:string;
  description!:string;
 createDate!:Date;
-snaps:number=0;  
+snaps:number=0;
 person!:string;
 image!:string;
-btnSnap:string='Snapé';
+btnSnap!:string;
 
 ngOnInit(){
+  this.btnSnap="Oh Snap"
   this.title='Mise en pratique de la semaine';
   this.person="Smith";
   this.description="Le personnage que j'ai inventé pour les test"
- //permet de mettre la date 
+ //permet de mettre la date
   this.createDate= new Date();
    this.image='../../assets/img1.jpg'
 }
 
-//incrementation de snap 
+//incrementation de snap
 
 onSnap(){
-if (this.btnSnap==='Snapé'){
-this.snaps ++;
-this.btnSnap='déjà Snapé'
+if (this.btnSnap==='déjà Snapé'){
+this.snaps --;
+this.btnSnap='Snapé'
 }else{
-  this.snaps --;
-  this.btnSnap='oh snap'
+  this.snaps ++;
+  this.btnSnap='déjà Snapé'
 }
 }
 }
