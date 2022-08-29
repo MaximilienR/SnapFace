@@ -1,10 +1,10 @@
 <div class="face-snap-card">
-<h2>{{title}}</h2>
-<p>Mise en ligne le {{createDate}}</p>
+<h2>{{faceSnap.title}}</h2>
+<p>Mise en ligne le {{faceSnap.createDate}}</p>
 <img [src]="image" [alt]="title">
-<p>{{description}} j'ai nomé {{person}}</p>
+<p>{{faceSnap.description}} j'ai nomé {{person}}</p>
 <p>
   <!--click : reaction de l'évenement en liant l'évannement de typescript vers html -->
   <button (click)="onSnap()">{{btnSnap}}</button>
-  :-){{snaps}}</p>
+  :-){{faceSnap.snap}}</p>
 </div>
